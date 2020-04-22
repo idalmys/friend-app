@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrienFinder</title>
-     <!------Bottstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+    <!---------Icon-------->
+     <link rel="icon" type="image/jpg" href="../public/images/survey.jpg" />
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+
+    <!-----FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!---------Bottstrap--------->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+   <!-----------CSS-------------->
+  <link rel="stylesheet" type ="text/css" href="./css/style.css">
+
 </head>
 <body>
     <section class="container">
@@ -19,11 +31,13 @@
               <p>Answer a few basic questions.
                 Then find the friend with the greatest compatibility!</p>
             </div>
-           <a href="/survey" ><button class="btn btn-lg btn-primary" >Go to survey</button></a>
+           <a href="/survey" ><button class="btn btn-lg btn-success" ><i class="fas fa-list-alt "></i> Go to survey</button></a>
           </div>
     </section>
     <div class="container">
-        <a href="/api/friends" >API FRIENDS LIST </a>
+        <a href="/api/friends" target="_blank" >API FRIENDS LIST </a>
+            <strong>|</strong> 
+        <a href="https://github.com/idalmys/friend-app" target="_blank"> GIT HUB REPO</a>
     </div>
    
 </body>
