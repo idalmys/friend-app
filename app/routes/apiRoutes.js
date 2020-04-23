@@ -1,8 +1,7 @@
 const express=require("express");
-
 const router=express.Router();
-
 const dataFriends= require("../data/friends")
+
 
 router.get("/api/friends",(req,res)=>{
     res.json(dataFriends);
@@ -24,17 +23,9 @@ router.post("/api/friends",(req,res)=>{
         scores : scoreConverted
     }
    
-
- // Get friend with the best match
-    var total_difference=0;
-    var BestMach ={
-        name : "",
-        foto : "",
-        total_difference : 55
-
-    }
-  var resta = [];
-  var arrayMatch=[]
+    // substratc array of number and sunm the reult
+    var resta = [];
+ 
   
   for (var i = 0; i < dataFriends.length; i++) {
     var totaldifference =0;
@@ -44,19 +35,26 @@ router.post("/api/friends",(req,res)=>{
                        
             }
             resta.push(totaldifference) 
+         
+            // grab the min value 
+            var bestmach = Math.min(...resta);
 
-              /* for (var k = 0; k < resta.length; k++) {
-                  if(res[k] >= resta[i]){
-                      BestMach = 
-                  }
-                   
-               }*/
+            //Grab the position into the array 
+
+            var position =resta.indexOf(bestmach);
+}           
+            // User with the least difference into the array
+            var friendBest ={
+                name: dataFriends[position].name,
+                foto : dataFriends[position].foto,
+                bestmatch : bestmach
+
+            }
+            
    
-}
-console.log(resta);
+     dataFriends.push(newF);
+     res.json(friendBest);
    
-   // dataFriends.push(newF);
-   // res.send(newF);
 
 });
 

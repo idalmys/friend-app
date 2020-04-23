@@ -126,16 +126,16 @@
             <option value="5">5</option>
         </select>
         <br>
-        <button type="submit" id="submit" class="btn btn-lg btn-primary btn-block"  >Submit</button>
+        <button type="button" id="submit" class="btn btn-lg btn-primary btn-block"  data-toggle="modal" data-target="results">Submit</button>
 
         <!---------------------Modal Section----------------------------------------------->
-        <div class="container" id="results">
-            <div class="modal fade">
+        <div class="container" >
+            <div  id="results" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <!---------Modal Header--->
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" >x</button>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <strong class="modal-title">Best Match</strong>
                         </div>
                         <!-------Modal content-->
@@ -186,10 +186,10 @@ $("#submit").on("click",(event)=>{
  $.post("/api/friends",friends,(data)=>{
      console.log(data);
 
-    /*$("#name_result").text(data.name);
-     $("image_result").attr("src",data.foto);
+    $("#name_result").text(data.name);
+    $("#imag_result").attr("src",data.foto);
 
-     $("#results").modal("toggle");*/
+  //$("#results").modal("toggle");
      
  })
    

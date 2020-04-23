@@ -8,6 +8,7 @@ const app= express();
 app.set("Port", 8080);
 
 //Middlewares
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
@@ -16,7 +17,7 @@ app.use(require("./app/routes/htmlRoutes"));
 app.use(require("./app/routes/apiRoutes"))
 
 //Public
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"../public")));
 
 //Start server
 app.listen(app.get("Port"),()=>{
