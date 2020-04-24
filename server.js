@@ -17,7 +17,7 @@ app.use(require("./app/routes/htmlRoutes"));
 app.use(require("./app/routes/apiRoutes"))
 
 //Public
-app.use(express.static(path.join(__dirname,"../public")));
+app.use(express.static("app/public"));
 
 //Start server
 app.listen(app.get("Port"),()=>{

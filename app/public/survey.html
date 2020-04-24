@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frind Finder</title>
-       <!------Bottstrap-->
+    <title>Friend Finder</title>
+    <!---------Icon-------->
+    <link rel="icon" type="image/jpg" href="/images/survey.jpg" />
+
+    <!------Bottstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
+   <!--Google font-->
+   <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+
+  <!----------------------------------CSS--------------------------------->
+  <link rel="stylesheet" type ="text/css" href="/css/style.css">
+
 </head>
 <body>
-    <section class="container">
-        <h1> Survey Questions</h1>
+    <!---------------------Survey--------------------------------------------------->
+    <form action="" id="survey-form" class="container">
+        <div class="container">
+            
+        <h2> Survey Questions</h2>
         <hr>
         <div >
-            <h2>About you</h2>
+            <h4>About you</h4>
             <hr>
-            <h3>Name (Required)</h3>
+            <h4>Name (Required)</h4>
             <input type="text" class="form-control" id="name" required>
-            <h3>Link to Photo Image (Required)</h3>
+
+            <h4>Link to Photo Image (Required)</h4>
             <input type="text" class="form-control" id="foto" required>
+
         </div>
-        <h2>Questions</h2>
+        <br>
+        <h3>Questions</h3>
         <hr>
-        <h4>How you rate health personnel in this pandemic time.
-        </h4>
+        <h4>How you rate health personnel in this pandemic time.</h4>
         <select class="chosen"id="q1" >
             <option >Select an option</option>
             <option value="1">1</option>
@@ -36,6 +51,9 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
+        <br>
+        <br>
+
         <h4>You feel stressed about this global pandemic.</h4>
         <select class="chosen"id="q2" >
             <option >Select an option</option>
@@ -46,6 +64,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4> You feel it's been a good action to send checks to the population.</h4>
         <select class="chosen"id="q3" >
             <option >Select an option</option>
@@ -56,6 +76,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>You believe that the news has helped us to keep us informed of the progress of the pandemic.</h4>
         <select class="chosen"id="q4" >
             <option >Select an option</option>
@@ -66,6 +88,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>You think that human beings learn to take care of nature.</h4>
         <select class="chosen"id="q5" >
             <option >Select an option</option>
@@ -76,6 +100,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>Staying at home helps us eradicate contact with other people and stop the spread of the disease </h4>
         <select class="chosen"id="q6" >
             <option >Select an option</option>
@@ -86,6 +112,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>This global situation has allowed you to have some time with your family.</h4>
         <select class="chosen"id="q7" >
             <option >Select an option</option>
@@ -96,6 +124,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>You're overwhelmed with the volume of new content in classes.</h4>
         <select class="chosen"id="q8" >
             <option >Select an option</option>
@@ -106,6 +136,8 @@
             <option value="5">5</option>
         </select>
         <br>
+        <br>
+
         <h4>In these modern times social media has weakened interpersonal relationships-.</h4>
         <select class="chosen"id="q9" >
             <option >Select an option</option>
@@ -116,9 +148,11 @@
             <option value="5">5</option>
         </select>
         <br>
-        <h4>how hard it has been for you to be home</h4>
+        <br>
+
+        <h4>How hard it has been for you to be home</h4>
         <select class="chosen"id="q10" >
-            <option >Select an option</option>
+            <option value="" >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -126,42 +160,50 @@
             <option value="5">5</option>
         </select>
         <br>
-        <button type="button" id="submit" class="btn btn-lg btn-primary btn-block"  data-toggle="modal" data-target="results">Submit</button>
+        <button type="button" id="submit" class="btn btn-lg btn-success btn-block"  data-toggle="modal" data-target="results">Submit</button>
+        </div>
 
-        <!---------------------Modal Section----------------------------------------------->
-        <div class="container" >
-            <div  id="results" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!---------Modal Header--->
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <strong class="modal-title">Best Match</strong>
-                        </div>
-                        <!-------Modal content-->
-                        <div class="modal-body">
-                           <h3 id="name_result"></h3>
-                           <img id="imag_result">
-                          </div>
-                          <!-----Modal Footer------>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
-                          </div>
+    </form>
+    <div class="container">
+        <a href="/api/friends" target="_blank" >API FRIENDS LIST </a>
+            <strong>|</strong> 
+        <a href="https://github.com/idalmys/friend-app" target="_blank"> GIT HUB REPO</a>
+    </div>
+
+
+    <!---------------------Modal Section----------------------------------------------->
+    <div class="container" >
+        <div  id="results" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!---------Modal Header--->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <strong class="modal-title">Best Match</strong>
                     </div>
-                    
+                    <!-------Modal content-->
+                    <div class="modal-body">
+                       <h3 id="name_result"></h3>
+                       <img id="imag_result">
+                      </div>
+                      <!-----Modal Footer------>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
+                      </div>
                 </div>
+                
             </div>
         </div>
- 
-    </section>
-    
-    
+    </div>
+
+       
 </body>
 <script type="text/javascript">
 $(".chosen").chosen();
 
 $("#submit").on("click",(event)=>{
- event.preventDefault();
+
+    event.preventDefault();
     var friends={
         name : $("#name").val(),
         foto : $("#foto").val(),
@@ -192,10 +234,33 @@ $("#submit").on("click",(event)=>{
   //$("#results").modal("toggle");
      
  })
+
+
+
+
+
+
+   
    
 })
 
-
+function validate (){
+     var validate=true;
+   
+     $(".form-group").each(()=>{
+        if($(this).val()===""){
+            return  validate=false;
+        }
+    })
+        
+    
+   
+    $(".chosen").each(()=>{
+        if($(this).val()===""){
+            return  validate=false;
+        }
+    })
+}
 
 
 

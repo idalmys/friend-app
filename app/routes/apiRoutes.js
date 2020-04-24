@@ -50,11 +50,13 @@ router.post("/api/friends",(req,res)=>{
                 bestmatch : bestmach
 
             }
-            
+            console.log(resta)
+            console.log(position)
+            console.log(friendBest)       
    
      dataFriends.push(newF);
      res.json(friendBest);
-   
+  
 
 });
 
