@@ -1,11 +1,11 @@
 const express= require("express");
-const path=require("path");
+
 
 //Run express
 const app= express();
 
 //Settings
-app.set("Port", 8080);
+app.set("Port", process.env.Port || 8080);
 
 //Middlewares
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(require("./app/routes/htmlRoutes"));
 app.use(require("./app/routes/apiRoutes"))
 
-//Public
+//Public contains static elements (images,css and html)
 app.use(express.static("app/public"));
 
 //Start server

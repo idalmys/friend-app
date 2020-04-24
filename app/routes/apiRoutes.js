@@ -1,11 +1,17 @@
 const express=require("express");
+
+//using the router method 
 const router=express.Router();
+
+//instance of friends.js 
 const dataFriends= require("../data/friends")
 
-
+//Get data
 router.get("/api/friends",(req,res)=>{
     res.json(dataFriends);
-}) 
+})
+
+// send data to the server
 router.post("/api/friends",(req,res)=>{ 
      
      //Get the score 
@@ -23,12 +29,14 @@ router.post("/api/friends",(req,res)=>{
         scores : scoreConverted
     }
    
-    // substratc array of number and sunm the reult
+    // substratc each  number  into the array and sunm the reult
     var resta = [];
  
-  
+  //for loop to move into the datafriends array
   for (var i = 0; i < dataFriends.length; i++) {
     var totaldifference =0;
+
+            //for loop to move into the scores that belong to each friends
             for (var j = 0; j < scoreConverted.length; j++) {
                 
                 totaldifference +=(Math.abs(scoreConverted[j] - dataFriends[i].scores[j])) ;
@@ -50,11 +58,11 @@ router.post("/api/friends",(req,res)=>{
                 bestmatch : bestmach
 
             }
-            console.log(resta)
-            console.log(position)
-            console.log(friendBest)       
-   
+                
+    // Add to the datafriends array the newFriend created
      dataFriends.push(newF);
+
+    //Send object json with the best match against the new friend added
      res.json(friendBest);
   
 

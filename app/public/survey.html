@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend Finder</title>
-    <!---------Icon-------->
+    <!---------Icon--------------------------------------------------------------------------->
     <link rel="icon" type="image/jpg" href="/images/survey.jpg" />
 
-    <!------Bottstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!------Bottstrap----------------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+  <!--------------------------------Chosen----------------------------------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
-   <!--Google font-->
+   <!--Google-font----------------------------------------------------------------------------------------->
    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 
-  <!----------------------------------CSS--------------------------------->
+  <!----------------------------------CSS----------------------------------------------------------------->
   <link rel="stylesheet" type ="text/css" href="/css/style.css">
+
 
 </head>
 <body>
@@ -31,19 +34,18 @@
         <hr>
         <div >
             <h4>About you</h4>
-            <hr>
             <h4>Name (Required)</h4>
             <input type="text" class="form-control" id="name" required>
 
             <h4>Link to Photo Image (Required)</h4>
             <input type="text" class="form-control" id="foto" required>
-
+            <hr>
         </div>
         <br>
         <h3>Questions</h3>
-        <hr>
+       
         <h4>How you rate health personnel in this pandemic time.</h4>
-        <select class="chosen"id="q1" >
+        <select class="chosen-select"id="q1" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -55,7 +57,7 @@
         <br>
 
         <h4>You feel stressed about this global pandemic.</h4>
-        <select class="chosen"id="q2" >
+        <select class="chosen-select"id="q2" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -67,7 +69,7 @@
         <br>
 
         <h4> You feel it's been a good action to send checks to the population.</h4>
-        <select class="chosen"id="q3" >
+        <select class="chosen-select"id="q3" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -79,7 +81,7 @@
         <br>
 
         <h4>You believe that the news has helped us to keep us informed of the progress of the pandemic.</h4>
-        <select class="chosen"id="q4" >
+        <select class="chosen-select"id="q4" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -91,7 +93,7 @@
         <br>
 
         <h4>You think that human beings learn to take care of nature.</h4>
-        <select class="chosen"id="q5" >
+        <select class="chosen-select"id="q5" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -103,7 +105,7 @@
         <br>
 
         <h4>Staying at home helps us eradicate contact with other people and stop the spread of the disease </h4>
-        <select class="chosen"id="q6" >
+        <select class="chosen-select"id="q6" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -115,7 +117,7 @@
         <br>
 
         <h4>This global situation has allowed you to have some time with your family.</h4>
-        <select class="chosen"id="q7" >
+        <select class="chosen-select"id="q7" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -127,7 +129,7 @@
         <br>
 
         <h4>You're overwhelmed with the volume of new content in classes.</h4>
-        <select class="chosen"id="q8" >
+        <select class="chosen-select"id="q8" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -139,7 +141,7 @@
         <br>
 
         <h4>In these modern times social media has weakened interpersonal relationships-.</h4>
-        <select class="chosen"id="q9" >
+        <select class="chosen-select"id="q9" >
             <option >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -151,7 +153,7 @@
         <br>
 
         <h4>How hard it has been for you to be home</h4>
-        <select class="chosen"id="q10" >
+        <select class="chosen-select"id="q10" >
             <option value="" >Select an option</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -159,9 +161,10 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br>
-        <button type="button" id="submit" class="btn btn-lg btn-success btn-block"  data-toggle="modal" data-target="results">Submit</button>
-        </div>
+       
+        <button type="button" id="submit" class="btn btn-lg btn-success btn-block"  >Submit</button>
+          
+ </div>
 
     </form>
     <div class="container">
@@ -170,44 +173,67 @@
         <a href="https://github.com/idalmys/friend-app" target="_blank"> GIT HUB REPO</a>
     </div>
 
-
-    <!---------------------Modal Section----------------------------------------------->
-    <div class="container" >
-        <div  id="results" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!---------Modal Header--->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <strong class="modal-title">Best Match</strong>
-                    </div>
-                    <!-------Modal content-->
-                    <div class="modal-body">
-                       <h3 id="name_result"></h3>
-                       <img id="imag_result">
-                      </div>
-                      <!-----Modal Footer------>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
-                      </div>
+<!---------------------Modal Section----------------------------------------------->
+<div class="container" >
+    <div  id="best-match" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!---------Modal Header--->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <strong class="modal-title">Best Match</strong>
                 </div>
-                
+                <!-------Modal content-->
+                <div class="modal-body">
+                   <h3 id="name_result"></h3>
+                   <img id="imag_result">
+                  </div>
+                  <!-----Modal Footer------>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
+                  </div>
             </div>
+            
         </div>
     </div>
+</div>
+
 
        
 </body>
 <script type="text/javascript">
-$(".chosen").chosen();
 
-$("#submit").on("click",(event)=>{
+// chosen plugin
+$(".chosen-select").chosen();
 
-    event.preventDefault();
-    var friends={
-        name : $("#name").val(),
-        foto : $("#foto").val(),
-        scores : [
+//onclick function
+$("#submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Form validation
+      function validate() {
+        var validateF = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            validateF = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            validateF = false;
+          }
+        });
+        return validateF;
+      }
+
+      if (validate()) {
+      
+        var friends = {
+          name: $("#name").val(),
+          foto: $("#foto").val(),
+          scores: [
             $("#q1").val(),
             $("#q2").val(),
             $("#q3").val(),
@@ -217,23 +243,25 @@ $("#submit").on("click",(event)=>{
             $("#q7").val(),
             $("#q8").val(),
             $("#q9").val(),
-            $("#q10").val()       
-        
-        ]
+            $("#q10").val()
+          ]
+        };
 
-        
-    }
+       
+        $.post("/api/friends", friends,(data) =>{
 
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          $("#name-result").text(data.name);
+          $("#img-result").attr("src", data.foto);
 
- $.post("/api/friends",friends,(data)=>{
-     console.log(data);
+          // Show the modal with the best match
+          $("#best-match").modal("toggle");
 
-    $("#name_result").text(data.name);
-    $("#imag_result").attr("src",data.foto);
-
-  //$("#results").modal("toggle");
-     
- })
+        });
+      } else {
+        alert("Fill out all fields !");
+      }
+    });
 
 
 
@@ -241,26 +269,9 @@ $("#submit").on("click",(event)=>{
 
 
    
-   
-})
 
-function validate (){
-     var validate=true;
-   
-     $(".form-group").each(()=>{
-        if($(this).val()===""){
-            return  validate=false;
-        }
-    })
-        
-    
-   
-    $(".chosen").each(()=>{
-        if($(this).val()===""){
-            return  validate=false;
-        }
-    })
-}
+
+
 
 
 
