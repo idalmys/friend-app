@@ -5,7 +5,7 @@ const express= require("express");
 const app= express();
 
 //Settings
-app.set("Port", process.env.Port || 8080);
+app.set("port", process.env.Port || 8080);
 
 //Middlewares
 
@@ -20,6 +20,6 @@ app.use(require("./app/routes/apiRoutes"))
 app.use(express.static("app/public"));
 
 //Start server
-app.listen(app.get("Port"),()=>{
-    console.log("Server started on "+ app.get("Port"));
+app.listen(app.get("port"),()=>{
+    console.log("Server started on "+ app.get("port"));
 })
