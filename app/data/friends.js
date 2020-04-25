@@ -16,25 +16,10 @@ var friends =[
     ]
     
 },
+
 {
-    name : "Inalvys",
-    foto: "https://idalmys.github.io/Bootstrap-Portfolio/assets/images/ida3.jpg",
-    scores:[
-        4,
-        1,
-        1,
-        4,
-        5,
-        5,
-        3,
-        3,
-        1,
-        2
-    ]
-},
-{
-    name : "Ashley",
-    foto: "https://idalmys.github.io/Bootstrap-Portfolio/assets/images/ida3.jpg",
+    name : "truckstop",
+    foto: "https://app.truckstop.com/images/Logos/ProCorner01.svg",
     scores:[
         2,
         2,

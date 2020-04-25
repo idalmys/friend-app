@@ -47,11 +47,11 @@
         <h4>How you rate health personnel in this pandemic time.</h4>
         <select class="chosen-select"id="q1" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -59,11 +59,11 @@
         <h4>You feel stressed about this global pandemic.</h4>
         <select class="chosen-select"id="q2" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -71,11 +71,11 @@
         <h4> You feel it's been a good action to send checks to the population.</h4>
         <select class="chosen-select"id="q3" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -83,11 +83,11 @@
         <h4>You believe that the news has helped us to keep us informed of the progress of the pandemic.</h4>
         <select class="chosen-select"id="q4" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -95,11 +95,11 @@
         <h4>You think that human beings learn to take care of nature.</h4>
         <select class="chosen-select"id="q5" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -107,11 +107,11 @@
         <h4>Staying at home helps us eradicate contact with other people and stop the spread of the disease </h4>
         <select class="chosen-select"id="q6" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -119,11 +119,11 @@
         <h4>This global situation has allowed you to have some time with your family.</h4>
         <select class="chosen-select"id="q7" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -131,11 +131,11 @@
         <h4>You're overwhelmed with the volume of new content in classes.</h4>
         <select class="chosen-select"id="q8" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -143,11 +143,11 @@
         <h4>In these modern times social media has weakened interpersonal relationships-.</h4>
         <select class="chosen-select"id="q9" >
             <option >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
         <br>
         <br>
@@ -155,11 +155,11 @@
         <h4>How hard it has been for you to be home</h4>
         <select class="chosen-select"id="q10" >
             <option value="" >Select an option</option>
-            <option value="1">1</option>
+            <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="5">5 (Strongly Agree)</option>
         </select>
        
         <button type="button" id="submit" class="btn btn-lg btn-success btn-block"  >Submit</button>
@@ -180,17 +180,19 @@
             <div class="modal-content">
                 <!---------Modal Header--->
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <strong class="modal-title">Best Match</strong>
+                  <h5 class="modal-title" >Best Match</h5> 
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span> 
+                  </button> 
                 </div>
                 <!-------Modal content-->
                 <div class="modal-body">
-                   <h3 id="name_result"></h3>
-                   <img id="imag_result">
+                   <h3 id="name-result"></h3>
+                   <img id="img-result">
                   </div>
                   <!-----Modal Footer------>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary close" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
                   </div>
             </div>
             
@@ -263,6 +265,7 @@ $("#submit").on("click", function(event) {
       }
     });
 
+    
 
 
 

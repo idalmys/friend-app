@@ -22,14 +22,14 @@ router.post("/api/friends",(req,res)=>{
         return parseInt(item,10);
     })
 
-    // Create new Friend to send to api/friends
+    // Create new user to send to api/friends
     var newF = {
         name:req.body.name,
         foto: req.body.foto,
         scores : scoreConverted
     }
    
-    // substratc each  number  into the array and sunm the reult
+    
     var resta = [];
  
   //for loop to move into the datafriends array
@@ -62,7 +62,7 @@ router.post("/api/friends",(req,res)=>{
     // Add to the datafriends array the newFriend created
      dataFriends.push(newF);
 
-    //Send object json with the best match against the new friend added
+    //Send object json with the best match against the new user added
      res.json(friendBest);
   
 
