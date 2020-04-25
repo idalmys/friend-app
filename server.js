@@ -5,7 +5,7 @@ const express= require("express");
 const app= express();
 
 //Settings
-app.set("Port", process.env.Port || 8080);
+app.set("Port", (process.env.Port || 8080));
 
 //Middlewares
 
